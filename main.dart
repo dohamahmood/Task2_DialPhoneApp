@@ -429,16 +429,7 @@ class _MyHomePage2State extends State<MyHomePage2> {
                   children: [
                     for (int i = 0; i > myList.length; i++)
                       phoneNum(name: "doha mahmood", number: myList[i]),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
-                    phoneNum(name: "doha mahmood", number: "214124"),
+                    
                   ],
                 ),
               ),

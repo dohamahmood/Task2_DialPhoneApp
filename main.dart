@@ -50,35 +50,30 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          /////////
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 50),
-                child: TextButton(
-                  child: Row(
-                    children: const [
-                      Icon(
-                        Icons.add,
-                        color: Color.fromARGB(255, 39, 195, 119),
-                      ),
-                      Text(
-                        " Add to contacts",
-                        style:
-                            TextStyle(color: Color.fromARGB(255, 39, 195, 119)),
-                      ),
-                    ],
+
+          Padding(
+            padding: const EdgeInsets.only(bottom: 50),
+            child: TextButton(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Icons.add,
+                    color: Color.fromARGB(255, 39, 195, 119),
                   ),
-                  onPressed: () {
-                    if (!phoneNumber.isEmpty) myList.add(phoneNumber);
-                    phoneNumber = "";
-                    print(myList);
-                    setState(() {});
-                  },
-                ),
+                  Text(
+                    " Add to contacts",
+                    style: TextStyle(color: Color.fromARGB(255, 39, 195, 119)),
+                  ),
+                ],
               ),
-            ],
+              onPressed: () {
+                if (!phoneNumber.isEmpty) myList.add(phoneNumber);
+                phoneNumber = "";
+                print(myList);
+                setState(() {});
+              },
+            ),
           ),
           ///////////////////////
           Container(
@@ -224,6 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(
                           builder: (context) => const MyHomePage2(),
                         ));
+                    setState(() {});
                   },
                 ),
                 Contact(
@@ -427,9 +423,8 @@ class _MyHomePage2State extends State<MyHomePage2> {
               Expanded(
                 child: ListView(
                   children: [
-                    for (int i = 0; i > myList.length; i++)
+                    for (int i = 0; i < myList.length; i++)
                       phoneNum(name: "doha mahmood", number: myList[i]),
-                    
                   ],
                 ),
               ),
